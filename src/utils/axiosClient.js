@@ -37,7 +37,7 @@ axiosClient.interceptors.response.use(async(response) => {
   if (statusCode === 401 && !originalRequest._retry) {
     originalRequest._retry=true
     const response = await axios.create({
-      withCredentials:true,}).get(`${process.env.REACT_APP_SERVER_BASE_URL}/auth/refresh`)
+      withCredentials:true,}).get(`${process.env.REACT_APP_SERVER_BASE_URL.split(',')}/auth/refresh`)
     if(response.data.status==='ok'){
         setItem(KEY_ACCESS_TOKEN,response.data.result.accessToken) 
         originalRequest.headers['Authorization']=`Bearer ${response.data.result.accessToken}`

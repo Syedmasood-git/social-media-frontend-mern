@@ -24,11 +24,38 @@
     color: #61dafb;
   }
   
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
+  @media only screen and (max-width:450px){
+    .Login{
+      background-color: aliceblue;
     }
-    to {
-      transform: rotate(360deg);
+    .Signup{
+      background-color: aliceblue;
+    }
+    .signup-box{
+      min-width: 330px !important;
+      background-color: #b9cbee;
+    }
+    .login-box{
+      min-width: 330px !important;
+      background-color: #b9cbee;
+    }
+    .feed .container{
+      flex-direction: column-reverse;
+    }
+    .following{
+      height: fit-content !important;
+    }
+    .dummy-img{
+      width: 310px;
+      height: 300px;
+    }
+    .profile .container{
+      flex-direction: column-reverse;
+    }
+    .follower-info{
+      font-size: 19px;
+    }
+    .post .content{
+      height: 300px !important;
     }
   }

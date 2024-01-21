@@ -18,14 +18,19 @@ const Post = ({post}) => {
             postId:post._id
         }))
     }
+    const handleDoubleClick=()=>{
+            dispatch(likeandUnlikePost({
+                postId:post._id
+            }))
+    }
   return (
     <div className='post'>
         <div className="heading" onClick={()=>navigate(`/profile/${post.owner._id}`)}>
             <Avatar src={post?.owner?.avatar?.url}/>
             <h4>{post?.owner?.name}</h4>
         </div>
-        <div className="content">
-            <img src={post?.image?.url} alt='post'/>
+        <div className="content" onDoubleClick={handleDoubleClick}>
+            <img  src={post?.image?.url} alt='post'/>
         </div>
         <div className="footer">
             <div className="like" onClick={handlePostLike}>

@@ -8,6 +8,7 @@ import { axiosClient } from "../../utils/axiosClient";
 import { setLoading } from "../../redux/slices/appConfigSlice";
 import { KEY_ACCESS_TOKEN, removeItem } from "../../utils/localStoragemanager";
 
+
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Navbar = () => {
       <div className="container">
         <h2 className="banner hover-link" onClick={() => navigate("/")}>
           {" "}
-          Social Media
+          Connect .
         </h2>
         <div className="right-side">
           <div
