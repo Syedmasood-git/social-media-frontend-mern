@@ -1,0 +1,25 @@
+.navbar{
+    height: 60px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .right-side{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .logout{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

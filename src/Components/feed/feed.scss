@@ -1,0 +1,22 @@
+.feed{
+
+    .container{
+        display: flex;
+        gap: 20px;
+        .left{
+            flex: 2;
+        }
+        .right{
+            flex: 1;
+            height: 100vh;
+
+            .following{
+                margin-top: 20px;
+                height: 45vh;
+                .title{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
